@@ -1,11 +1,14 @@
-// 1. import packages
+/* 
+1. import packages
+*/
 const { xml2js, js2xml } = require("xml-js");
 const fs = require("fs");
 
-// 2. get xml files
+/* 
+2. get xml files
+*/
 const awardsXmlPath = "./src/awards-import-reference-220504.xml";
 const awardsXmlInput = fs.readFileSync(awardsXmlPath).toString();
-// const projectsXmlPath = "./src/projects-export-test-220505.xml";
 const projectsXmlPath = "./src/projects-export-220505.xml";
 const projectsXmlInput = fs.readFileSync(projectsXmlPath).toString();
 const mediaXmlPath = "./src/media-export-220504.xml";
@@ -13,7 +16,9 @@ const mediaXmlInput = fs.readFileSync(mediaXmlPath).toString();
 const projectsRefXmlPath = "./src/projects-import-reference-220504.xml";
 const projectsRefXmlInput = fs.readFileSync(projectsRefXmlPath).toString();
 
-// 3. convert xml to json
+/* 
+3. convert xml to json
+*/
 const awardsJsonResult = xml2js(awardsXmlInput, { compact: true, spaces: 2 });
 const projectsJsonResult = xml2js(projectsXmlInput, {
 	compact: true,
@@ -28,7 +33,9 @@ const projectsRefJsonResult = xml2js(projectsRefXmlInput, {
 	spaces: 2,
 });
 
-// 4. write json conversion file for reference
+/* 
+4. write json conversion file for reference
+*/
 fs.writeFileSync(
 	"./dist/projects/awardsRef-JsonReference.json",
 	JSON.stringify(awardsJsonResult)
@@ -46,14 +53,18 @@ fs.writeFileSync(
 	JSON.stringify(projectsRefJsonResult)
 );
 
-// 5. transform the json object
+/* 
+5. transform the json object
+*/
 let awardPost = awardsJsonResult.data.post;
 let projectPost = projectsJsonResult.data.post;
 let mediaPost = mediaJsonResult.data.post;
-// for each project
 
+// for each project
 for (let i = 0; i < projectPost.length; i++) {
-	// 5.1 transform awards to pipe separated slug strings
+	/* 
+	5.1 transform awards to pipe separated slug strings
+	*/
 	let awardName;
 	let awardSlugs = [];
 	let projectAwards = projectPost[i].Awards.row;
@@ -77,7 +88,9 @@ for (let i = 0; i < projectPost.length; i++) {
 	projectPost[i].Awards = {};
 	projectPost[i].Awards._text = awardsSlugString;
 
-	// 5.2 transform lead architects and team to pipe separated slug strings
+	/* 
+	5.2 transform lead architects and team to pipe separated slug strings
+	*/
 	let projectLeads = projectPost[i].LeadArchitects.row;
 	let projectTeam = projectPost[i].ProjectTeam.row;
 	let personSlug;
@@ -109,14 +122,18 @@ for (let i = 0; i < projectPost.length; i++) {
 	// add slug string to new Team key
 	projectPost[i].Team = {};
 	projectPost[i].Team._text = personSlugString;
-	// delete old press array
+	// delete old project leads and team arrays
 	delete projectPost[i].LeadArchitects;
 	delete projectPost[i].ProjectTeam;
 
-	// 5.3 transform affiliates to pipe separated slug strings
+	/* 
+	5.3 transform affiliates to pipe separated slug strings
+	*/
 	// Might be fine as is
 
-	// 5.4 transform press strings to pipe separated slug strings
+	/* 
+	5.4 transform press strings to pipe separated slug strings
+	*/
 	let projectPress = projectPost[i].KeepReading.row;
 	let pressSlug;
 	let pressSlugs = [];
@@ -124,10 +141,7 @@ for (let i = 0; i < projectPost.length; i++) {
 		// for each press item
 		for (let j = 0; j < projectPress.length; j++) {
 			// get press slug
-			/* the press posts got added to the database
-			 * with a -2 suffix for some reason
-			 */
-			pressSlug = projectPress[j].press._text + "-2";
+			pressSlug = projectPress[j].press._text;
 			// push slug to array
 			if (pressSlug != undefined) {
 				pressSlugs.push(pressSlug);
@@ -139,11 +153,12 @@ for (let i = 0; i < projectPost.length; i++) {
 	// add slug string to new Press key
 	projectPost[i].Press = {};
 	projectPost[i].Press._text = pressSlugString;
-
 	// delete old press array
 	delete projectPost[i].KeepReading;
 
-	// 5.5 transform featured content to block content string
+	/* 
+	5.5 transform featured content to block content string
+	*/
 	let contentBlock = projectPost[i].FeaturedContent.row;
 	let postContent = "";
 	let layout = "";
@@ -151,101 +166,130 @@ for (let i = 0; i < projectPost.length; i++) {
 
 	if (contentBlock != undefined) {
 		// for each featured content block
-
 		for (let j = 0; j < contentBlock.length; j++) {
 			layout = contentBlock[j].featured_content_layout._text;
+			/*
+			if the content block is 
+			a pull quote or
+			a single image or
+			a double image or
+			a custom code
+			*/
 			if (layout == "pull quote") {
-				// if pull quote
 				let pullquote = "";
+				// don't know why but sometimes the key is _text or _cdata
 				if (contentBlock[j].featured_content_caption._text) {
+					// get the string
 					pullquote = contentBlock[j].featured_content_caption._text;
+					// wrap the string in block editor tags
 					let pullquoteString = wrapPullquote(pullquote);
+					// add the string to the content array
 					postContentArr.push(pullquoteString);
 				} else if (contentBlock[j].featured_content_caption._cdata) {
+					// get the string
 					pullquote = contentBlock[j].featured_content_caption._cdata;
+					// create the block editor string
 					let pullquoteString = wrapPullquote(pullquote);
+					// add the string to the content array
 					postContentArr.push(pullquoteString);
 				}
 			} else if (layout == "single image") {
-				// if single image
 				let singleImage = "";
 				let singleImageId = "";
 				let singleImageCaption = "";
+				// if there's an image string
 				if (contentBlock[j].featured_content_images._text) {
+					// get the image url
 					singleImage = contentBlock[j].featured_content_images._text;
+					// get the image id
 					singleImageId = getMediaId(singleImage);
 				}
+				// if there's a caption
 				if (contentBlock[j].featured_content_caption._text) {
+					// get the string
 					singleImageCaption = contentBlock[j].featured_content_caption._text;
 				}
-
+				// create the block editor string
 				let singleImageString = wrapSingleImage(
 					singleImage,
 					singleImageId,
 					singleImageCaption
 				);
-
+				// add the string to the content array
 				if (singleImageString) {
 					postContentArr.push(singleImageString);
 				}
 			} else if (layout == "double image") {
-				// if double image
 				let doubleImageCaption = "";
 				let doubleImageArr = [];
 				let doubleImageIdArr = [];
+				// if there's an image string
 				if (contentBlock[j].featured_content_images._text) {
+					// split the string into an array
 					doubleImageArr =
 						contentBlock[j].featured_content_images._text.split(",");
-
+					// for each image string in the array
 					for (let k = 0; k < doubleImageArr.length; k++) {
+						// get the image id
 						doubleImageIdArr.push(getMediaId(doubleImageArr[k]));
 					}
 				}
+				// if there's a caption
 				if (contentBlock[j].featured_content_caption._text) {
+					// get the string
 					doubleImageCaption = contentBlock[j].featured_content_caption._text;
 				}
+				// create the block editor string
 				let doubleImageString = wrapDoubleImage(
 					doubleImageArr,
 					doubleImageIdArr,
 					doubleImageCaption
 				);
+				// add the string to the content array
 				postContentArr.push(doubleImageString);
 			} else if (layout == "custom code") {
-				// if custom code
 				let customCode = "";
+				// if there's a custom code string
 				if (contentBlock[j].featured_content_custom._cdata) {
+					// get the string
 					customCode = contentBlock[j].featured_content_custom._cdata;
+					// add the string to the content array
 					postContentArr.push(customCode);
 				}
 			}
 		}
 	}
-	// console.log(postContentArr);
+	// combine the content array into a single string separated by returns
 	postContent = postContentArr.join("\n\n");
+	// create a project content key
 	projectPost[i].Content = {};
+	// assing the key the content string value
 	projectPost[i].Content._cdata = postContent;
-	// delete old Featured Content
+	// delete the old Featured Content key
 	delete projectPost[i].FeaturedContent;
 
-	// 5.7 transform featured image fields to block content
+	/* 
+	5.7 transform featured image fields to block content
+	*/
+	// get the image string
 	let featuredImageUrl = projectPost[i].FeaturedImage._text;
+	// if the image string exists
 	if (featuredImageUrl != undefined) {
+		// get the image id
 		let featuredImageId = getMediaId(featuredImageUrl);
+		// create the block editor string
 		let featuredImageString = wrapFullImage(featuredImageUrl, featuredImageId);
-		// create Content node and assign string
+		// add it to the start of the content string
 		projectPost[i].Content._cdata =
 			featuredImageString + "\n\n" + projectPost[i].Content._cdata;
 	}
-	// delete old Featured Image
+	// delete the old Featured Image key
 	delete projectPost[i].FeaturedImage;
 
-	// projectPost[i].Content._cdata = projectPost[i].Content._cdata.replaceAll(
-	// 	"fisherpartners.net",
-	// 	"pm-fisher-partners.local"
-	// );
-	// console.log(projectPost[i].Content._cdata);
-
-	// 5.8 transform the categories to a featured button and project categories
+	/* 
+	5.8 transform the categories to a featured button and project categories
+	*/
+	// split the categories string into an array
 	let postCategories = projectPost[i].Categories._text.split("|");
 	let isFeatured;
 	// Search for Featured category
@@ -254,10 +298,17 @@ for (let i = 0; i < projectPost.length; i++) {
 	} else {
 		isFeatured = "No";
 	}
+	// create a key for featured status
 	projectPost[i].IsFeatured = {};
+	// assign the featured status value
 	projectPost[i].IsFeatured._text = isFeatured;
 
 	let postCategoryArr = [];
+	/*
+	if the category is 
+	Culture or Learn or Live or Work
+	add the string to the category array
+	*/
 	if (postCategories.includes("Culture")) {
 		postCategoryArr.push("Culture");
 	}
@@ -273,29 +324,42 @@ for (let i = 0; i < projectPost.length; i++) {
 	if (postCategories.includes("Work")) {
 		postCategoryArr.push("Work");
 	}
-
+	// combine the array values into a single string separated by pipes
 	let postCategoriesString = postCategoryArr.join("|");
-	// replace old categories string
+	// replace the old categories string
 	projectPost[i].Categories._text = postCategoriesString;
 }
 
 // Update the json
 projectsJsonResult.data.post = projectPost;
 
-// 6. write the transformed json file
+/* 
+6. write the transformed json file
+*/
 fs.writeFileSync(
 	"./dist/projects/projects-jsonResult.json",
 	JSON.stringify(projectsJsonResult)
 );
 
-// 7. convert json to xml
+/* 
+7. convert json to xml
+*/
 const xmlOutput = js2xml(projectsJsonResult, { compact: true, spaces: 2 });
 
-// 8. write xml output file
+/* 
+8. write xml output file
+*/
 fs.writeFileSync("./dist/projects/projects-xmlOutput.xml", xmlOutput);
 
-// Functions
+/* 
+Functions
+*/
 
+/*
+compare the award title within a project
+with the award list in the awards json file
+to get the correct award slug
+*/
 function getAwardSlug(award) {
 	let awardTitle, awardSlug;
 	// loop through the award posts
@@ -312,6 +376,11 @@ function getAwardSlug(award) {
 	}
 }
 
+/*
+compare the image url
+with the media json file urls
+to get the media id
+*/
 function getMediaId(imageUrl) {
 	let mediaUrl, mediaId;
 	// loop through the media posts
@@ -326,6 +395,10 @@ function getMediaId(imageUrl) {
 	}
 }
 
+/*
+wrap the pull quote in
+wordpress block tags
+*/
 function wrapPullquote(string) {
 	let wrappedString =
 		`<!-- wp:quote -->\n<blockquote class="wp-block-quote"><p>` +
@@ -334,6 +407,10 @@ function wrapPullquote(string) {
 	return wrappedString;
 }
 
+/*
+wrap the image url and id
+wordpress block tags
+*/
 function wrapFullImage(url, id) {
 	let wrappedImageString =
 		`<!-- wp:image {"align":"full","id":` +
@@ -346,6 +423,10 @@ function wrapFullImage(url, id) {
 	return wrappedImageString;
 }
 
+/*
+wrap the image url, id and caption
+wordpress block tags
+*/
 function wrapSingleImage(url, id, caption) {
 	let wrappedImageString;
 	if (caption) {
@@ -372,6 +453,11 @@ function wrapSingleImage(url, id, caption) {
 	return wrappedImageString;
 }
 
+/*
+for each image in the double image gallery
+wrap the image url, id and caption
+wordpress block tags
+*/
 function wrapDoubleImage(urlArray, idArray, caption) {
 	let wrappedImageStringArr = [];
 	let wrappedImageString;
