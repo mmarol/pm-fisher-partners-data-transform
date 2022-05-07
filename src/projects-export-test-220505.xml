@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+	<post>
+		<ID>226</ID>
+		<Title>Test Project 1</Title>
+		<Categories>Home|Live</Categories>
+		<Status>publish</Status>
+		<Location>Santa Ynez, CA</Location>
+		<CompletionDate>20060101</CompletionDate>
+		<SquareFootage>7000</SquareFootage>
+		<LeadArchitects>
+			<row>
+				<architect>frederick-fisher</architect>
+			</row>
+			<row>
+				<architect>david-ross</architect>
+			</row>
+		</LeadArchitects>
+		<ProjectTeam>
+			<row>
+				<employee>hector-semidey</employee>
+			</row>
+			<row>
+				<employee>matthew-kelley</employee>
+			</row>
+			<row>
+				<employee>takashige-ikawa</employee>
+			</row>
+		</ProjectTeam>
+		<ProjectAffiliates>
+			<row>
+				<affiliate>Shepley Bulfinch</affiliate>
+			</row>
+			<row>
+				<affiliate>Robert Benson Photography</affiliate>
+			</row>
+		</ProjectAffiliates>
+		<Sustainability>LEED Gold</Sustainability>
+		<Awards>
+			<row>
+				<award_name>
+					<![CDATA[2018 European Centre for Architecture Art Design & Urban Studies and the Chicago Athenaeum: Museum of Architecture & Design, Green good Design Award]]>
+				</award_name>
+				<website>https://www.chi-athenaeum.org/green-architecture-2018/2018/04/19/otis-college-of-art-and-design-campus-expansion-los-angeles,-california,-usa-2015-2016/</website>
+			</row>
+			<row>
+				<award_name>2018 AIA|LA COTE Merit Award</award_name>
+				<website>https://www.aialosangeles.org/awards/design-awards/cote-la-winners-2018/</website>
+			</row>
+			<row>
+				<award_name>2018 AIA|LA Residential Architecture Award</award_name>
+				<website>https://www.aialosangeles.org/awards/residential-architecture-awards/winners-2018/</website>
+			</row>
+		</Awards>
+		<KeepReading>
+			<row>
+				<press>a-safer-place-otis-college-of-art-and-design-reimagines-its-campus-with-covid-in-mind</press>
+			</row>
+			<row>
+				<press>otis-college-of-art-and-design-covid-19-study</press>
+			</row>
+		</KeepReading>
+		<FeaturedImage>https://fisherpartners.net/wp-content/uploads/santa-ynez.jpg</FeaturedImage>
+		<FeaturedContent>
+			<row>
+				<featured_content_layout>single image</featured_content_layout>
+				<featured_content_images>https://fisherpartners.net/wp-content/uploads/santa-ynez-1.jpg</featured_content_images>
+				<featured_content_caption></featured_content_caption>
+				<featured_content_custom></featured_content_custom>
+			</row>
+			<row>
+				<featured_content_layout>pull quote</featured_content_layout>
+				<featured_content_images></featured_content_images>
+				<featured_content_caption>The foothills in Santa Ynez are arid and quiet, filled with farms and ranches. Our Santa Ynez residence, one story and close to the ground, echoes that landscape.</featured_content_caption>
+				<featured_content_custom></featured_content_custom>
+			</row>
+			<row>
+				<featured_content_layout>double image</featured_content_layout>
+				<featured_content_images>https://fisherpartners.net/wp-content/uploads/santa-ynez-3.jpg,https://fisherpartners.net/wp-content/uploads/santa-ynez-2.jpg</featured_content_images>
+				<featured_content_caption>The ancient prototype of the courtyard house creates a protected gravel garden that complements the wide, natural vistas of the valley.</featured_content_caption>
+				<featured_content_custom></featured_content_custom>
+			</row>
+			<row>
+				<featured_content_layout>custom code</featured_content_layout>
+				<featured_content_images>https://fisherpartners.net/wp-content/uploads/smcsb-1.jpg,https://fisherpartners.net/wp-content/uploads/smcsb-2.jpg</featured_content_images>
+				<featured_content_caption>
+					<![CDATA[AIA | LA 2019 COTE NEXT <br />
+Honor Award Winner!]]>
+				</featured_content_caption>
+				<featured_content_custom>
+					<![CDATA[<h1 style="text-align: center;"><a class="bsc" href="https://www.aialosangeles.org/news/press-releases/aiala-presidential-honorees-announced-for-2020/" target="_blank" rel="noopener">AIA|LA 2020 Presidential Honoree Building Team Award Winner</a></h1>
+<h1 style="text-align: center;"><a href="https://www.aialosangeles.org/awards/design-awards/cote-cote-next-winners-2019/?utm_source=2019+Design+Award+Winners+Announced+by+AIA%7CLA&amp;utm_campaign=Eblasts&amp;utm_medium=email">AIA | LA 2019 COTE NEXT<br />
+Honor Award Winner</a></h1>
+<p style="text-align: center;"><a href="https://www.aialosangeles.org/awards/design-awards/cote-cote-next-winners-2019/?utm_source=2019+Design+Award+Winners+Announced+by+AIA%7CLA&amp;utm_campaign=Eblasts&amp;utm_medium=email"><img loading="lazy" class="size-medium wp-image-1327 aligncenter" src="https://fisherpartners.net/wp-content/uploads/Screen-Shot-2019-10-29-at-10.10.05-600x461.png" alt="" width="600" height="461" srcset="https://fisherpartners.net/wp-content/uploads/Screen-Shot-2019-10-29-at-10.10.05-600x461.png 600w, https://fisherpartners.net/wp-content/uploads/Screen-Shot-2019-10-29-at-10.10.05-150x115.png 150w, https://fisherpartners.net/wp-content/uploads/Screen-Shot-2019-10-29-at-10.10.05-768x590.png 768w, https://fisherpartners.net/wp-content/uploads/Screen-Shot-2019-10-29-at-10.10.05-1024x786.png 1024w, https://fisherpartners.net/wp-content/uploads/Screen-Shot-2019-10-29-at-10.10.05.png 1302w" sizes="(max-width: 600px) 100vw, 600px" /></a></p>
+<p style="text-align: center;"><em>“At a time when Los Angeles turns to its architects to address some our greatest challenges,</em><br />
+<em>these winning projects contribute to quality of life in Los Angeles and points beyond,</em><br />
+<em>through the realization of design excellence,” stated 2019 AIA|LA President Barbara Bouza, FAIA.</em><br />
+(Full AIA | LA Press Release <span style="text-decoration: underline;"><a href="https://www.aialosangeles.org/news/press-releases/design-award-winners-for-2019-announced-by-aiala/?utm_source=2019+Design+Award+Winners+Announced+by+AIA%7CLA&amp;utm_campaign=Eblasts&amp;utm_medium=email">HERE</a></span>)</p>
+<p style="text-align: center;">Thank you to our design and construction partners &#8211; It&#8217;s the team that makes this project so wonderful.</p>
+]]>
+				</featured_content_custom>
+			</row>
+		</FeaturedContent>
+	</post>
+	<post>
+		<ID>20</ID>
+		<Title>Test Project 2</Title>
+		<Categories>Culture|Featured|Home|Latest|Learn|Live|Local|Work</Categories>
+		<Status>publish</Status>
+		<Location>Santa Ynez, CA</Location>
+		<CompletionDate>20060101</CompletionDate>
+		<SquareFootage>7000</SquareFootage>
+		<LeadArchitects>
+			<row>
+				<architect>frederick-fisher</architect>
+			</row>
+			<row>
+				<architect>david-ross</architect>
+			</row>
+		</LeadArchitects>
+		<ProjectTeam></ProjectTeam>
+		<ProjectAffiliates></ProjectAffiliates>
+		<Sustainability>LEED Gold</Sustainability>
+		<Awards></Awards>
+		<KeepReading>
+			<row>
+				<press>a-safer-place-otis-college-of-art-and-design-reimagines-its-campus-with-covid-in-mind</press>
+			</row>
+		</KeepReading>
+		<FeaturedImage>https://fisherpartners.net/wp-content/uploads/santa-ynez.jpg</FeaturedImage>
+		<FeaturedContent>
+			<row>
+				<featured_content_layout>single image</featured_content_layout>
+				<featured_content_images>https://fisherpartners.net/wp-content/uploads/santa-ynez-1.jpg</featured_content_images>
+				<featured_content_caption></featured_content_caption>
+				<featured_content_custom></featured_content_custom>
+			</row>
+			<row>
+				<featured_content_layout>pull quote</featured_content_layout>
+				<featured_content_images></featured_content_images>
+				<featured_content_caption>The foothills in Santa Ynez are arid and quiet, filled with farms and ranches. Our Santa Ynez residence, one story and close to the ground, echoes that landscape.</featured_content_caption>
+				<featured_content_custom></featured_content_custom>
+			</row>
+		</FeaturedContent>
+	</post>
+</data>

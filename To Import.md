@@ -1,0 +1,11 @@
+- [ ] Projects
+- [ ] Clients
+- [ ] Awards
+- [x] People
+- [-] Opportunities
+- [x] Delights
+- [x] Blog Posts
+- [x] Press
+- [ ] Pages
+
+- [ ] Media

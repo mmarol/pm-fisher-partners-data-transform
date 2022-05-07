@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+    <post>
+        <ID>1616</ID>
+        <Title>Test Import 01</Title>
+        <Content>
+            <![CDATA[<!-- wp:heading -->
+<h2>heading</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Paragraph</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>List A</li><li>List B</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:quote -->
+<blockquote class="wp-block-quote"><p>quote</p><cite>Citation</cite></blockquote>
+<!-- /wp:quote -->
+
+<!-- wp:image {"id":2584,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="http://pm-fisher-partners.local/wp-content/uploads/2022/02/21075-1-1024x421.jpg" alt="" class="wp-image-2584"/><figcaption>Caption</figcaption></figure>
+<!-- /wp:image -->
+
+<!-- wp:gallery {"linkTo":"none"} -->
+<figure class="wp-block-gallery has-nested-images columns-default is-cropped"><!-- wp:image {"id":2567,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="http://pm-fisher-partners.local/wp-content/uploads/2022/02/FFP-Group_Resized.jpg" alt="" class="wp-image-2567"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:image {"id":2546,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="http://pm-fisher-partners.local/wp-content/uploads/2022/01/ALEX_NYE_211112_OVS_032-A-e1643319014579.jpg" alt="" class="wp-image-2546"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:image {"id":2561,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="http://pm-fisher-partners.local/wp-content/uploads/2022/01/The-Armory-Show-Rendering.jpg" alt="" class="wp-image-2561"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:image {"id":2558,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="http://pm-fisher-partners.local/wp-content/uploads/2022/01/MK-3.jpg" alt="" class="wp-image-2558"/></figure>
+<!-- /wp:image --><figcaption class="blocks-gallery-caption">Gallery</figcaption></figure>
+<!-- /wp:gallery -->
+
+<!-- wp:embed {"url":"https://www.youtube.com/watch?v=UNdz7OJhSmg","type":"video","providerNameSlug":"youtube","responsive":true,"className":"wp-embed-aspect-16-9 wp-has-aspect-ratio"} -->
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+https://www.youtube.com/watch?v=UNdz7OJhSmg
+</div></figure>
+<!-- /wp:embed -->
+
+<!-- wp:columns -->
+<div class="wp-block-columns"><!-- wp:column -->
+<div class="wp-block-column"><!-- wp:paragraph -->
+<p>vbxvbxvb</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column -->
+
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:paragraph -->
+<p>xcvbxvbxvb</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns -->]]>
+        </Content>
+        <ProjectCategories></ProjectCategories>
+        <Category>
+            <term>Learn</term>
+        </Category>
+        <Location>location name</Location>
+        <CompletionDate>completion date</CompletionDate>
+        <SquareFootage>square footage</SquareFootage>
+        <Sustainability>sustainability</Sustainability>
+        <Team>frederick-fisher|david-ross|alexander-tutungi|shabnam-abtahi|dale-suttle</Team>
+        <Affiliates>
+            <row>
+                <name>Affiliate 1</name>
+            </row>
+            <row>
+                <name>Affiliate 2</name>
+            </row>
+        </Affiliates>
+        <Awards>designing-the-parks-honor-award-national-park-service|enr-regional-best-project-award-southern-california</Awards>
+        <RelatedArticles>
+            <row>
+                <link>
+                    <title>2019 AIA | LA COTE NEXT Honor Award</title>
+                    <url>https://pm-fisher-partners.local/award/2019-aia-la-cote-next-honor-award/</url>
+                    <target></target>
+                </link>
+            </row>
+            <row>
+                <link>
+                    <title>Do windows have to be tiny to be green? No. City Hall East proves it</title>
+                    <url>https://www.kcrw.com/news/shows/greater-la/dodgers-fake-news-windows/windows-city-hall-east-santa-monica</url>
+                    <target>_blank</target>
+                </link>
+            </row>
+        </RelatedArticles>
+    </post>
+</data>

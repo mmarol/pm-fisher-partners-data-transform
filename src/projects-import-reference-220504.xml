@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+	<post>
+		<ID>1616</ID>
+		<Title>Auto Draft</Title>
+		<Content>
+			<![CDATA[<!-- wp:heading -->
+<h2>Test heading</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Test Paragraph</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>Test List A</li><li>Test List B</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:quote -->
+<blockquote class="wp-block-quote"><p>Test quote</p><cite>Test Citation</cite></blockquote>
+<!-- /wp:quote -->
+
+<!-- wp:image {"id":2584,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="http://pm-fisher-partners.local/wp-content/uploads/2022/02/21075-1-1024x421.jpg" alt="" class="wp-image-2584"/><figcaption>Test Caption</figcaption></figure>
+<!-- /wp:image -->
+
+<!-- wp:gallery {"linkTo":"none"} -->
+<figure class="wp-block-gallery has-nested-images columns-default is-cropped"><!-- wp:image {"id":2567,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="http://pm-fisher-partners.local/wp-content/uploads/2022/02/FFP-Group_Resized.jpg" alt="" class="wp-image-2567"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:image {"id":2546,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="http://pm-fisher-partners.local/wp-content/uploads/2022/01/ALEX_NYE_211112_OVS_032-A-e1643319014579.jpg" alt="" class="wp-image-2546"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:image {"id":2561,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="http://pm-fisher-partners.local/wp-content/uploads/2022/01/The-Armory-Show-Rendering.jpg" alt="" class="wp-image-2561"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:image {"id":2558,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="http://pm-fisher-partners.local/wp-content/uploads/2022/01/MK-3.jpg" alt="" class="wp-image-2558"/></figure>
+<!-- /wp:image --><figcaption class="blocks-gallery-caption">Test Gallery</figcaption></figure>
+<!-- /wp:gallery -->
+
+<!-- wp:embed {"url":"https://www.youtube.com/watch?v=UNdz7OJhSmg","type":"video","providerNameSlug":"youtube","responsive":true,"className":"wp-embed-aspect-16-9 wp-has-aspect-ratio"} -->
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+https://www.youtube.com/watch?v=UNdz7OJhSmg
+</div></figure>
+<!-- /wp:embed -->
+
+<!-- wp:columns -->
+<div class="wp-block-columns"><!-- wp:column -->
+<div class="wp-block-column"><!-- wp:paragraph -->
+<p>vbxvbxvb</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column -->
+
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:paragraph -->
+<p>xcvbxvbxvb</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns -->]]>
+		</Content>
+		<Category>
+			<term>Learn</term>
+		</Category>
+		<Location>Test location name</Location>
+		<CompletionDate>Test completion date</CompletionDate>
+		<SquareFootage>Test square footage</SquareFootage>
+		<Sustainability>Test sustainability</Sustainability>
+		<Team>frederick-fisher|david-ross|alexander-tutungi</Team>
+		<Affiliates>
+			<row>
+				<name>Test Affiliate 1</name>
+			</row>
+			<row>
+				<name>Test Affiliate 2</name>
+			</row>
+		</Affiliates>
+		<Awards>2013-aiala-design-honor-award|2017-southern-california-development-forum-educational-design-award|2021-sustainable-innovation-award-for-honor-in-the-zero-waste-circular-solutions-category-by-the-u-s-green-building-council-of-los-angeles</Awards>
+		<RelatedPress>2020-aiala-building-team-walk-in-the-park-joseph-coriaty-faia-responds-to-the-honoree-qa-2|a-studio-visit-with-frederick-fisher-partners-as-they-embark-upon-the-next-phase-of-practice-2</RelatedPress>
+	</post>
+	<post>
+		<ID>3285</ID>
+		<Title>Test Import 01</Title>
+		<Content>
+			<![CDATA[<!-- wp:heading -->
+<h2>heading</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Paragraph</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>List A</li><li>List B</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:quote -->
+<blockquote class="wp-block-quote"><p>quote</p><cite>Citation</cite></blockquote>
+<!-- /wp:quote -->
+
+<!-- wp:image {"id":2584,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="http://pm-fisher-partners.local/wp-content/uploads/2022/02/21075-1-1024x421.jpg" alt="" class="wp-image-2584"/><figcaption>Caption</figcaption></figure>
+<!-- /wp:image -->
+
+<!-- wp:gallery {"linkTo":"none"} -->
+<figure class="wp-block-gallery has-nested-images columns-default is-cropped"><!-- wp:image {"id":2567,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="http://pm-fisher-partners.local/wp-content/uploads/2022/02/FFP-Group_Resized.jpg" alt="" class="wp-image-2567"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:image {"id":2546,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="http://pm-fisher-partners.local/wp-content/uploads/2022/01/ALEX_NYE_211112_OVS_032-A-e1643319014579.jpg" alt="" class="wp-image-2546"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:image {"id":2561,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="http://pm-fisher-partners.local/wp-content/uploads/2022/01/The-Armory-Show-Rendering.jpg" alt="" class="wp-image-2561"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:image {"id":2558,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="http://pm-fisher-partners.local/wp-content/uploads/2022/01/MK-3.jpg" alt="" class="wp-image-2558"/></figure>
+<!-- /wp:image --><figcaption class="blocks-gallery-caption">Gallery</figcaption></figure>
+<!-- /wp:gallery -->
+
+<!-- wp:embed {"url":"https://www.youtube.com/watch?v=UNdz7OJhSmg","type":"video","providerNameSlug":"youtube","responsive":true,"className":"wp-embed-aspect-16-9 wp-has-aspect-ratio"} -->
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+https://www.youtube.com/watch?v=UNdz7OJhSmg
+</div></figure>
+<!-- /wp:embed -->
+
+<!-- wp:columns -->
+<div class="wp-block-columns"><!-- wp:column -->
+<div class="wp-block-column"><!-- wp:paragraph -->
+<p>vbxvbxvb</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column -->
+
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:paragraph -->
+<p>xcvbxvbxvb</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns -->]]>
+		</Content>
+		<Category>
+			<term>Learn</term>
+		</Category>
+		<Location>location name</Location>
+		<CompletionDate>completion date</CompletionDate>
+		<SquareFootage>square footage</SquareFootage>
+		<Sustainability>sustainability</Sustainability>
+		<Team>frederick-fisher|david-ross|alexander-tutungi|shabnam-abtahi|dale-suttle</Team>
+		<Affiliates>
+			<row>
+				<name>Affiliate 1</name>
+			</row>
+			<row>
+				<name>Affiliate 2</name>
+			</row>
+		</Affiliates>
+		<Awards>designing-the-parks-honor-award-national-park-service|enr-regional-best-project-award-southern-california</Awards>
+		<RelatedPress></RelatedPress>
+	</post>
+</data>

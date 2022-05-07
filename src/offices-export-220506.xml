@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+	<post>
+		<ID>129</ID>
+		<Title>Los Angeles</Title>
+		<Content></Content>
+		<Address1>12248 Santa Monica Blvd.</Address1>
+		<Address2></Address2>
+		<City>Los Angeles</City>
+		<State>CA</State>
+		<Zip>90025</Zip>
+		<Country></Country>
+		<Resilience></Resilience>
+	</post>
+	<post>
+		<ID>130</ID>
+		<Title>New York</Title>
+		<Content></Content>
+		<Address1>150 West 28th St.</Address1>
+		<Address2>#1802</Address2>
+		<City>New York</City>
+		<State>NY</State>
+		<Zip>10001</Zip>
+		<Country></Country>
+		<Resilience></Resilience>
+	</post>
+</data>
